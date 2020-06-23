@@ -1,0 +1,46 @@
+int main()
+{
+   int VAR__819283;
+   int VAR__19328;
+   int VAR__4857423;
+   int VAR__12302;
+   int VAR_1238123;
+   int VAR__53647;
+   int VAR__temp;
+
+   scanf("%d", &VAR_1238123);
+   VAR__4857423 = 0;
+   VAR__12302   = 0;
+   for ( VAR__53647 = 0; VAR__53647 < VAR_1238123; VAR__53647++ )
+   {
+      scanf("%d%d", &VAR__819283, &VAR__19328);
+      VAR__temp = VAR__819283 - VAR__19328;
+
+      if (( VAR__temp == ( -1 )) || ( VAR__temp == 2 ))
+      {
+         VAR__4857423 = VAR__4857423 + 1;
+      }
+      else
+      if ( VAR__temp != 0 )
+      {
+         VAR__12302 = VAR__12302 + 1;
+      }
+   }
+
+   if ( VAR__4857423 > VAR__12302 )
+   {
+      printf("A");
+   }
+   else
+   if ( VAR__4857423 < VAR__12302 )
+   {
+      printf("B");
+   }
+   else
+   {
+      printf("Tie");
+   }
+
+
+   return 0;
+}

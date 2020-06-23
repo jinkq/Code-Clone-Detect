@@ -1,0 +1,67 @@
+int main()
+{
+   int  N;
+   int  VAR__53647;
+   int  VAR__21230;
+   int  VAR__COUNT;
+   int  VAR_FLAG;
+   char VAR__NUM[1000];
+
+   for ( VAR__53647 = 0; VAR__53647 < 1000; VAR__53647++ )
+   {
+      VAR__NUM[VAR__53647] = '0';
+   }
+
+   VAR__NUM[0] = '1';
+   cin >> N;
+   for ( VAR__53647 = 1; VAR__53647 <= N; VAR__53647++ )
+   {
+      VAR__COUNT = 999;
+
+      while ( VAR__NUM[VAR__COUNT] == '0' )
+      {
+         VAR__COUNT--;
+      }
+
+      VAR__COUNT++;
+      VAR__21230 = 0;
+      VAR_FLAG   = 0;
+
+      while ( VAR__21230 <= VAR__COUNT )
+      {
+         VAR__NUM[VAR__21230] = ( 2 * VAR__NUM[VAR__21230] ) - '0';
+
+         if ( VAR_FLAG == 1 )
+         {
+            VAR__NUM[VAR__21230]++;
+         }
+
+         if ( VAR__NUM[VAR__21230] > '9' )
+         {
+            VAR__NUM[VAR__21230] -= 10;
+            VAR_FLAG              = 1;
+         }
+         else
+         {
+            VAR_FLAG = 0;
+         }
+
+         VAR__21230++;
+      }
+   }
+
+   VAR__COUNT = 100;
+
+   while ( VAR__NUM[VAR__COUNT] == '0' )
+   {
+      VAR__COUNT--;
+   }
+
+   for ( VAR__53647 = VAR__COUNT; VAR__53647 >= 0; VAR__53647-- )
+   {
+      cout << VAR__NUM[VAR__53647];
+   }
+
+   cout << endl;
+   return 0;
+}

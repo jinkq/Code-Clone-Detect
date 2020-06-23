@@ -1,0 +1,91 @@
+int main()
+{
+   int    VAR__53647;
+   int    VAR_1238123;
+   double GPA;
+   double sum1 = 0;
+   double sum2 = 0;
+   int    xf[10];
+   int    df[10];
+   double gpa[10];
+
+   scanf("%d\n", &VAR_1238123);
+   for ( VAR__53647 = 0; VAR__53647 < VAR_1238123; VAR__53647++ )
+   {
+      if ( VAR__53647 == ( VAR_1238123 - 1 ))
+      {
+         scanf("%d\n", &xf[VAR__53647]);
+      }
+      else
+      {
+         scanf("%d", &xf[VAR__53647]);
+      }
+   }
+
+   for ( VAR__53647 = 0; VAR__53647 < VAR_1238123; VAR__53647++ )
+   {
+      scanf("%d", &df[VAR__53647]);
+   }
+
+   for ( VAR__53647 = 0; VAR__53647 < 10; VAR__53647++ )
+   {
+      if ( df[VAR__53647] >= 90 )
+      {
+         gpa[VAR__53647] = 4.0;
+      }
+      else
+      if ( df[VAR__53647] >= 85 )
+      {
+         gpa[VAR__53647] = 3.7;
+      }
+      else
+      if ( df[VAR__53647] >= 82 )
+      {
+         gpa[VAR__53647] = 3.3;
+      }
+      else
+      if ( df[VAR__53647] >= 78 )
+      {
+         gpa[VAR__53647] = 3.0;
+      }
+      else
+      if ( df[VAR__53647] >= 75 )
+      {
+         gpa[VAR__53647] = 2.7;
+      }
+      else
+      if ( df[VAR__53647] >= 72 )
+      {
+         gpa[VAR__53647] = 2.3;
+      }
+      else
+      if ( df[VAR__53647] >= 68 )
+      {
+         gpa[VAR__53647] = 2.0;
+      }
+      else
+      if ( df[VAR__53647] >= 64 )
+      {
+         gpa[VAR__53647] = 1.5;
+      }
+      else
+      if ( df[VAR__53647] >= 60 )
+      {
+         gpa[VAR__53647] = 1.0;
+      }
+      else
+      {
+         gpa[VAR__53647] = 0;
+      }
+   }
+
+   for ( VAR__53647 = 0; VAR__53647 < VAR_1238123; VAR__53647++ )
+   {
+      sum1 += xf[VAR__53647] * gpa[VAR__53647];
+      sum2 += xf[VAR__53647];
+   }
+
+   GPA = ( 1.0 * sum1 ) / sum2;
+   printf("%.2lf", GPA);
+   return 0;
+}

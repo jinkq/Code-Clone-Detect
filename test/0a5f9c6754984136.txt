@@ -1,0 +1,46 @@
+int main()
+{
+   int VAR_1238123;
+
+   scanf("%d\n", &VAR_1238123);
+   int VAR_SIZE[VAR_1238123][2];
+   for ( int VAR__53647 = 0; VAR__53647 < VAR_1238123; VAR__53647++ )
+   {
+      for ( int VAR__21230 = 0; VAR__21230 < 2; VAR__21230++ )
+      {
+         scanf("%d", &VAR_SIZE[VAR__53647][VAR__21230]);
+      }
+   }
+
+   int sum1 = 0;
+   int sum2 = 0;
+   for ( int VAR__53647 = 0; VAR__53647 < VAR_1238123; VAR__53647++ )
+   {
+      if ((( VAR_SIZE[VAR__53647][0] - VAR_SIZE[VAR__53647][1] ) == ( -1 )) || (( VAR_SIZE[VAR__53647][0] - VAR_SIZE[VAR__53647][1] ) == 2 ))
+      {
+         sum1++;
+      }
+      else
+      if ((( VAR_SIZE[VAR__53647][0] - VAR_SIZE[VAR__53647][1] ) == 1 ) || (( VAR_SIZE[VAR__53647][0] - VAR_SIZE[VAR__53647][1] ) == ( -2 )))
+      {
+         sum2++;
+      }
+   }
+
+   if ( sum1 > sum2 )
+   {
+      printf("A");
+   }
+   else
+   if ( sum1 < sum2 )
+   {
+      printf("B");
+   }
+   else
+   {
+      printf("Tie");
+   }
+
+
+   return 0;
+}

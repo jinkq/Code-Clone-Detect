@@ -1,0 +1,32 @@
+void main()
+{
+   int VAR__127322(int, int);
+
+   int VAR__1238129;
+   int VAR_1238123;
+   int VAR__temp;
+   scanf("%d", &VAR__temp);
+
+   while ( VAR__temp > 0 )
+   {
+      scanf("%d %d", &VAR__1238129, &VAR_1238123);
+      printf("%d\n", VAR__127322(VAR__1238129, VAR_1238123));
+      VAR__temp--;
+   }
+}
+
+
+int VAR__127322(int VAR__7685, int VAR__3918907)
+{
+   if (( VAR__7685 == 0 ) || ( VAR__3918907 == 1 ))
+   {
+      return 1;
+   }
+
+   if ( VAR__7685 < VAR__3918907 )
+   {
+      return VAR__127322(VAR__7685, VAR__7685);
+   }
+
+   return VAR__127322(VAR__7685 - VAR__3918907, VAR__3918907) + VAR__127322(VAR__7685, VAR__3918907 - 1);
+}

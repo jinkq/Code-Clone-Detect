@@ -1,0 +1,62 @@
+int main()
+{
+   int    VAR__53647;
+   int    VAR__21230;
+   int    VAR_233;
+   int    VAR__1238129;
+   int    VAR__8444594 = 0;
+   int    cd[2];
+   double VAR_9494;
+   char   VAR_SIZE[2][505];
+
+   scanf("%lf", &VAR_9494);
+   for ( VAR__53647 = 0; VAR__53647 < 2; VAR__53647++ )
+   {
+      scanf("%s", VAR_SIZE[VAR__53647]);
+      cd[VAR__53647] = strlen(VAR_SIZE[VAR__53647]);
+   }
+
+   for ( VAR__53647 = 0; VAR__53647 < 2; VAR__53647++ )
+   {
+      for ( VAR__21230 = 0; VAR__21230 < cd[VAR__53647]; VAR__21230++ )
+      {
+         if (((( VAR_SIZE[VAR__53647][VAR__21230] != 'A' ) && ( VAR_SIZE[VAR__53647][VAR__21230] != 'T' )) && ( VAR_SIZE[VAR__53647][VAR__21230] != 'C' )) && ( VAR_SIZE[VAR__53647][VAR__21230] != 'G' ))
+         {
+            VAR__8444594++;
+         }
+      }
+   }
+
+   if ( cd[0] != cd[1] )
+   {
+      VAR__8444594++;
+   }
+
+   if ( VAR__8444594 != 0 )
+   {
+      printf("error");
+   }
+   else
+   {
+      for ( VAR__21230 = 0; VAR__21230 < cd[0]; VAR__21230++ )
+      {
+         if ( VAR_SIZE[0][VAR__21230] == VAR_SIZE[1][VAR__21230] )
+         {
+            VAR__8444594++;
+         }
+      }
+
+      VAR_233 = ( VAR__8444594 * 100 ) / cd[0];
+
+      if ( VAR_233 > ( 100 * VAR_9494 ))
+      {
+         printf("yes");
+      }
+      else
+      {
+         printf("no");
+      }
+   }
+
+   return 0;
+}
