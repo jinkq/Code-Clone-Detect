@@ -1,0 +1,87 @@
+long yd(long VAR__7685)
+{
+   VAR__7685 = ( VAR__7685 - 1 ) % 2000;
+   long yd;
+   long VAR__53647;
+   long VAR_1238123 = 0;
+   for ( VAR__53647 = 1; VAR__53647 <= VAR__7685; VAR__53647++ )
+   {
+      if ((( VAR__53647 % 400 ) == 0 ) || ((( VAR__53647 % 4 ) == 0 ) && (( VAR__53647 % 100 ) != 0 )))
+      {
+         VAR_1238123 = VAR_1238123 + 1;
+      }
+   }
+
+   yd = ( VAR__7685 % 7 ) + ( VAR_1238123 % 7 );
+   return yd;
+}
+
+
+long md(long VAR__7685, long VAR__3918907)
+{
+   long VAR__819283[11] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30 };
+   long VAR__19328[11]  = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30 };
+   long VAR__53647;
+   long md = 0;
+
+   if ((( VAR__3918907 % 400 ) == 0 ) || ((( VAR__3918907 % 4 ) == 0 ) && (( VAR__3918907 % 100 ) != 0 )))
+   {
+      for ( VAR__53647 = 0; VAR__53647 <= ( VAR__7685 - 2 ); VAR__53647++ )
+      {
+         md = md + VAR__19328[VAR__53647];
+      }
+   }
+   else
+   {
+      for ( VAR__53647 = 0; VAR__53647 <= ( VAR__7685 - 2 ); VAR__53647++ )
+      {
+         md = md + VAR__819283[VAR__53647];
+      }
+   }
+
+   return md;
+}
+
+
+void main()
+{
+   long year;
+   long month;
+   long day;
+   long days;
+
+   scanf("%ld %ld %ld", &year, &month, &day);
+   days = ( yd(year) + ( md(month, year) % 7 )) + day;
+   long VAR__819283;
+   VAR__819283 = days % 7;
+   switch ( VAR__819283 )
+   {
+   case 1:
+      printf("Mon.\n");
+      break;
+
+   case 2:
+      printf("Tue.\n");
+      break;
+
+   case 3:
+      printf("Wed.\n");
+      break;
+
+   case 4:
+      printf("Thu.\n");
+      break;
+
+   case 5:
+      printf("Fri.\n");
+      break;
+
+   case 6:
+      printf("Sat.\n");
+      break;
+
+   case 0:
+      printf("Sun.\n");
+      break;
+   }
+}
